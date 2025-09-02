@@ -1,0 +1,9 @@
+import { View, Text } from 'react-native'
+
+export const ProductScreen = () => {
+    return (
+        <View>
+            <Text>Product</Text>
+        </View>
+    )
+}
