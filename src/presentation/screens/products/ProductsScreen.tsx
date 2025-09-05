@@ -1,13 +1,12 @@
 import { View, Text, FlatList, TouchableOpacity } from 'react-native'
 import { globalStyles } from '../../themes/themes';
-import { useNavigation } from '@react-navigation/native';
+import { useNavigation, type NavigationProp } from '@react-navigation/native';
 import { Button } from '@react-navigation/elements';
-
-
+import { type RootStackParamList } from '../../routes/StackNavigator';
 
 export const ProductsScreen = () => {
 
-    const navigation = useNavigation();
+    const navigation = useNavigation<NavigationProp<RootStackParamList>>();
 
 
     const products = [
@@ -38,7 +37,7 @@ export const ProductsScreen = () => {
                 renderItem={({ item }) => (
                     <TouchableOpacity
                         style={globalStyles.primaryButton}
-                        onPress={() => navigation.navigate('About' as never)}
+                        onPress={() => navigation.navigate("Product", [item.id, item.name])}
                     >
                         <Text>{item.name}</Text>
                     </TouchableOpacity>
@@ -48,7 +47,7 @@ export const ProductsScreen = () => {
 
             <Button
                 style={globalStyles.primaryButton}
-                onPress={() => navigation.navigate('Setting' as never)}>
+                onPress={() => navigation.navigate("Setting")}>
                 Ajustes
             </Button>
         </View>

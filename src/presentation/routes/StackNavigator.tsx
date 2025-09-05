@@ -3,8 +3,19 @@ import { HomeScreen } from '../screens/home/HomeScreen';
 import { AboutScreen } from '../screens/about/AboutScreen';
 import { ProductsScreen } from '../screens/products/ProductsScreen';
 import { SettingScreen } from '../screens/setting/SettingScreen';
+import { ProductScreen } from '../screens/products/ProductScreen';
 
-const Stack = createStackNavigator();
+
+
+export type RootStackParamList = {
+    Home: undefined;
+    About: undefined;
+    Product: [id: number, name: string];
+    Products: undefined;
+    Setting: undefined;
+};
+
+const Stack = createStackNavigator<RootStackParamList>();
 
 export const StackNavigator = () => {
     return (
@@ -24,6 +35,7 @@ export const StackNavigator = () => {
             <Stack.Screen name="About" component={AboutScreen} />
             <Stack.Screen name="Products" component={ProductsScreen} />
             <Stack.Screen name="Setting" component={SettingScreen} />
+            <Stack.Screen name="Product" component={ProductScreen} />
         </Stack.Navigator>
     );
 }
