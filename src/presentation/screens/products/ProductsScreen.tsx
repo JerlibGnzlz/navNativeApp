@@ -44,6 +44,7 @@ export const ProductsScreen = () => {
                     </TouchableOpacity>
                 )}
             />
+            <Text >Ajustes</Text>
 
             <Button
                 style={globalStyles.primaryButton}
