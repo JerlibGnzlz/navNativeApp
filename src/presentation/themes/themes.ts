@@ -1,7 +1,7 @@
 import { StyleSheet } from "react-native"
 
 export const globalColors = {
-    primary: '#5856D6',
+    primary: 'gray',
     secondary: '#FF9500',
     tertiary: '#FF5858',
     background: '#F5F5F5',
@@ -9,7 +9,7 @@ export const globalColors = {
     error: '#F44336',
     warning: '#FFC107',
     info: '#2196F3',
-    text: '#333333',
+    text: 'white',
 
 }
 
@@ -30,6 +30,13 @@ export const globalStyles = StyleSheet.create({
         width: '100%',
         marginTop: 10,
         textAlign: 'center',
-        color: 'white'
+        color: 'white',
+        fontSize: 16,
+    },
+
+    primaryButtonText: {
+        color: 'white',
+        fontSize: 16,
+        textAlign: 'center',
     },
 })
