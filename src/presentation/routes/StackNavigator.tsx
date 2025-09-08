@@ -21,13 +21,13 @@ export const StackNavigator = () => {
     return (
         <Stack.Navigator screenOptions={{
             headerShown: true,
-            headerTitle: 'Nav App',
-            headerStyle: {
-                backgroundColor: 'green',
-                shadowColor: 'transparent',
-                elevation: 0
-            },
-            headerTintColor: 'white',
+            // headerTitle: 'Nav App',
+            // headerStyle: {
+            //     backgroundColor: 'green',
+            //     shadowColor: 'transparent',
+            //     elevation: 0
+            // },
+            headerTintColor: 'black',
             headerTitleAlign: 'center'
 
         }}>
