@@ -19,18 +19,20 @@ const Stack = createStackNavigator<RootStackParamList>();
 
 export const StackNavigator = () => {
     return (
-        <Stack.Navigator screenOptions={{
-            headerShown: true,
-            // headerTitle: 'Nav App',
-            // headerStyle: {
-            //     backgroundColor: 'green',
-            //     shadowColor: 'transparent',
-            //     elevation: 0
-            // },
-            headerTintColor: 'black',
-            headerTitleAlign: 'center'
+        <Stack.Navigator
+            screenOptions={{
+                headerShown: true,
+                // Removed drawerType as it is not a valid property for StackNavigator
+                // headerTitle: 'Nav App',
+                // headerStyle: {
+                //     backgroundColor: 'green',
+                //     shadowColor: 'transparent',
+                //     elevation: 0
+                // },
+                // headerTintColor: 'black',
+                // headerTitleAlign: 'center'
 
-        }}>
+            }}>
             <Stack.Screen name="Home" component={HomeScreen} />
             <Stack.Screen name="About" component={AboutScreen} />
             <Stack.Screen name="Products" component={ProductsScreen} />
